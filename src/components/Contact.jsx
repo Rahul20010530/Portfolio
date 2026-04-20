@@ -81,7 +81,7 @@ export default function Contact({ onResumeOpen }) {
         {/* Footer */}
         <div style={{ borderTop: '1px solid var(--border)', paddingTop: '28px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }} className="reveal">
           <div style={{ fontFamily: 'var(--font-mono)', fontSize: 'clamp(10px,1.2vw,12px)', color: 'var(--text-muted)' }}>
-            © 2025 <span style={{ color: 'var(--accent)' }}>Rahul Kumar</span> — Built with React + Vite
+            © 2026 <span style={{ color: 'var(--accent)' }}>Rahul Kumar</span>
           </div>
           <div style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--text-muted)', display: 'flex', gap: '6px', alignItems: 'center' }}>
             <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--accent)', animation: 'pulse-glow 2s infinite' }} />
