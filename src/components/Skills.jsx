@@ -10,7 +10,7 @@ const skillCategories = [
   { label: 'Security', icon: '🔒', color: '#f472b6', skills: [{ name: 'JWT/OAuth2', level: 92 }, { name: 'API Security', level: 88 }, { name: 'IT Compliance', level: 85 }, { name: 'REST Design', level: 90 }] },
 ]
 
-const techTags = ['Python', 'FastAPI', 'Django', 'DRF', 'Flask', 'MongoDB', 'MySQL', 'Redis', 'AWS S3', 'EC2', 'LangChain', 'OpenAI API', 'Hugging Face', 'JWT', 'OAuth2', 'Multiprocessing', 'RAG', 'Vector DB', 'Aggregation Pipeline', 'REST APIs', 'Batch Processing', 'NIC/UPSC']
+const techTags = ['Python', 'FastAPI', 'Django', 'DRF', 'Flask','Angular','Ract' ,'MongoDB', 'MySQL', 'Redis', 'AWS S3', 'EC2', 'LangChain', 'OpenAI API', 'Hugging Face', 'JWT', 'OAuth2', 'Multiprocessing', 'Multithreading','Batch Processing', 'RAG', 'Vector DB', 'Aggregation Pipeline', 'REST APIs', 'NIC/UPSC']
 
 function SkillRing({ level, color, size = 56 }) {
   const [animated, setAnimated] = useState(false)

@@ -12,7 +12,7 @@ export default function About() {
             <h2 className="section-title">Building Systems<br /><span>That Scale.</span></h2>
             <div className="accent-line" />
             <p style={{ fontSize: 'clamp(14px,1.6vw,16px)', color: 'var(--text-secondary)', lineHeight: 1.85, marginBottom: '18px' }}>
-              Backend Developer with 3+ years crafting scalable systems for
+              Backend Developer with 4 years crafting scalable systems for
               <span style={{ color: 'var(--accent)' }}> government-grade applications</span>. Currently building APIs for India's UPSC portal under NIC at Pioneer E Solutions.
             </p>
             <p style={{ fontSize: 'clamp(14px,1.6vw,16px)', color: 'var(--text-secondary)', lineHeight: 1.85, marginBottom: '32px' }}>
@@ -22,7 +22,7 @@ export default function About() {
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
               {[
                 { label: 'Location', value: 'New Delhi, India', icon: '📍' },
-                { label: 'Experience', value: '3+ Years', icon: '⏱' },
+                { label: 'Experience', value: '4 Years', icon: '⏱' },
                 { label: 'Email', value: 'rahulsiwan2001\n@gmail.com', icon: '✉️' },
                 { label: 'Phone', value: '+91 9135578125', icon: '📞' },
                 { label: 'LinkedIn', value: 'rahul2001kumar', icon: '🔗' },
@@ -59,7 +59,7 @@ export default function About() {
                   { t: 'o' },
                   { t: 'kv', k: '"name"', v: '"Rahul Kumar"', vc: '#fbbf24' },
                   { t: 'kv', k: '"role"', v: '"Backend Developer"', vc: '#fbbf24' },
-                  { t: 'kv', k: '"exp"', v: '"3+ years"', vc: 'var(--accent)' },
+                  { t: 'kv', k: '"exp"', v: '"4 years"', vc: 'var(--accent)' },
                   { t: 'kv', k: '"stack"', v: '["Python","FastAPI","Django"]', vc: '#34d399' },
                   { t: 'kv', k: '"ai"', v: '["LangChain","OpenAI","RAG"]', vc: '#a78bfa' },
                   { t: 'kv', k: '"db"', v: '["MongoDB","MySQL","Redis"]', vc: 'var(--accent-2)' },

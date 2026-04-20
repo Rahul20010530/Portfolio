@@ -1,11 +1,11 @@
 import { useState, useEffect, useRef } from 'react'
 import MagneticButton from './MagneticButton'
 
-const roles = ['Backend Developer', 'Python Engineer', 'FastAPI Architect', 'GenAI Integrator', 'System Designer']
+const roles = ['Backend Developer','Python Developer','FastAPI Architect', 'Microservices Architect',  'GenAI Developer', 'System Designer']
 
 export default function Hero({ onResumeOpen }) {
   const [roleIdx, setRoleIdx] = useState(0)
-  const [displayText, setDisplayText] = useState('')
+  const [displayText, setDisplayText] = useState('') 
   const [isDeleting, setIsDeleting] = useState(false)
   const [charIdx, setCharIdx] = useState(0)
   const matrixRef = useRef(null)
@@ -19,7 +19,7 @@ export default function Hero({ onResumeOpen }) {
     const resize = () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight }
     resize()
     window.addEventListener('resize', resize)
-    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&{}[]<>/\\アイウエカキ'
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&{}[]<>/\\'
     const fontSize = 13
     let drops = []
     const initDrops = () => { const cols = Math.floor(canvas.width / fontSize); drops = Array(cols).fill(0).map(() => Math.random() * -50) }
@@ -55,7 +55,7 @@ export default function Hero({ onResumeOpen }) {
 
   // Count up
   useEffect(() => {
-    const targets = [3, 2, 5, 2], suffixes = ['+', '', '+', '']
+    const targets = [4, 2, 10, 2], suffixes = ['+', '', '+', '']
     statsRef.current.forEach((el, i) => {
       if (!el) return
       let t0 = null
@@ -135,7 +135,7 @@ export default function Hero({ onResumeOpen }) {
               marginTop: '20px', fontSize: 'clamp(14px,1.6vw,16px)', color: 'var(--text-secondary)', maxWidth: '520px', lineHeight: 1.8,
               animation: 'fadeInUp 0.8s ease forwards', opacity: 0, animationDelay: '0.55s',
             }}>
-              3+ years crafting scalable backend systems at government scale. Specializing in{' '}
+              4 years crafting scalable backend systems at government scale. Specializing in{' '}
               <span style={{ color: 'var(--text-primary)', fontWeight: 600 }}>FastAPI</span>,{' '}
               <span style={{ color: 'var(--text-primary)', fontWeight: 600 }}>Django</span>,{' '}
               <span style={{ color: 'var(--text-primary)', fontWeight: 600 }}>MongoDB</span> &{' '}
