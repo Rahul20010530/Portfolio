@@ -202,3 +202,89 @@ body::after {
 .skill-ring { transform:rotate(-90deg); transform-origin:center; }
 .skill-ring-bg { fill:none; stroke:var(--surface-2); stroke-width:4; }
 .skill-ring-fill { fill:none; stroke-width:4; stroke-linecap:round; }
+
+/* =============================================
+   RESPONSIVE — full mobile-first media queries
+   ============================================= */
+
+/* ---- Base mobile overrides ---- */
+@media (max-width: 639px) {
+  .container { padding: 0 20px; }
+  .section { padding: 80px 0; min-height: auto; }
+  .section-title { font-size: 38px !important; }
+
+  /* Hide blobs on very small screens (perf) */
+  .blob-1 { width: 300px; height: 300px; opacity: 0.07; }
+  .blob-2 { width: 250px; height: 250px; opacity: 0.07; }
+  .blob-3 { display: none; }
+
+  /* Grid → single column */
+  .resp-grid-2 { grid-template-columns: 1fr !important; gap: 32px !important; }
+  .resp-grid-3 { grid-template-columns: 1fr !important; gap: 16px !important; }
+  .resp-grid-4 { grid-template-columns: 1fr 1fr !important; gap: 12px !important; }
+  .resp-exp-grid { grid-template-columns: 1fr !important; gap: 24px !important; }
+  .resp-hero-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+  .resp-stat-grid { gap: 24px !important; flex-wrap: wrap !important; }
+
+  /* Hide heavy decorative elements on mobile */
+  .resp-hide-mobile { display: none !important; }
+  .resp-show-mobile { display: flex !important; }
+
+  /* Sticky → static on mobile */
+  .resp-no-sticky { position: static !important; }
+
+  /* Navbar */
+  .resp-nav-links { display: none !important; }
+  .resp-hamburger { display: flex !important; }
+}
+
+/* ---- Tablet ---- */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .container { padding: 0 32px; }
+  .section { padding: 100px 0; }
+
+  .resp-grid-2 { grid-template-columns: 1fr !important; gap: 48px !important; }
+  .resp-grid-3 { grid-template-columns: repeat(2, 1fr) !important; gap: 16px !important; }
+  .resp-grid-4 { grid-template-columns: repeat(2, 1fr) !important; gap: 14px !important; }
+  .resp-exp-grid { grid-template-columns: 1fr !important; gap: 28px !important; }
+  .resp-hero-grid { grid-template-columns: 1fr !important; gap: 48px !important; }
+
+  .resp-no-sticky { position: static !important; }
+  .resp-hide-tablet { display: none !important; }
+  .resp-nav-links { gap: 20px !important; }
+}
+
+/* ---- Desktop ---- */
+@media (min-width: 1024px) {
+  .resp-show-mobile { display: none !important; }
+  .resp-hamburger { display: none !important; }
+}
+
+/* ---- Mobile Menu ---- */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 998;
+  background: rgba(3, 3, 10, 0.97);
+  backdrop-filter: blur(24px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  animation: fadeIn 0.2s ease;
+}
+
+.mobile-menu a {
+  font-family: var(--font-display);
+  font-size: 48px;
+  color: var(--text-primary);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+}
+
+.mobile-menu a:hover { color: var(--accent); }
+
+/* ---- Scroll lock ---- */
+body.menu-open { overflow: hidden; }
