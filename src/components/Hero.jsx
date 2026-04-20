@@ -213,7 +213,7 @@ export default function Hero({ onResumeOpen }) {
             </div>
             {/* Floating badges */}
             <div style={{ position: 'absolute', right: '-16px', top: '70px', background: 'var(--surface)', border: '1px solid rgba(0,229,255,0.3)', borderRadius: '10px', padding: '12px 16px', boxShadow: '0 8px 32px rgba(0,0,0,0.5)', animation: 'float 4s ease-in-out infinite' }}>
-              <div style={{ fontFamily: 'var(--font-display)', fontSize: '26px', color: 'var(--accent-2)', lineHeight: 1 }}>3+</div>
+              <div style={{ fontFamily: 'var(--font-display)', fontSize: '26px', color: 'var(--accent-2)', lineHeight: 1 }}>4+</div>
               <div style={{ fontFamily: 'var(--font-mono)', fontSize: '9px', color: 'var(--text-muted)', marginTop: '2px' }}>YEARS</div>
             </div>
             <div style={{ position: 'absolute', left: '-20px', bottom: '70px', background: 'var(--surface)', border: '1px solid rgba(124,58,237,0.3)', borderRadius: '10px', padding: '12px 16px', boxShadow: '0 8px 32px rgba(0,0,0,0.5)', animation: 'float 5s ease-in-out infinite', animationDelay: '1s' }}>
