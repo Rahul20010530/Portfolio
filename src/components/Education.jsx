@@ -1,11 +1,11 @@
 const internships = [
   {
-    role: 'Full Stack Development Intern', org: 'Ducat India', period: 'Jan 2022 – Jul 2022',
-    desc: 'Hands-on experience with Python, Django, DRF, HTML, and CSS. Built REST APIs and optimized backend logic.',
+    role: 'Full Stack Development Intern', org: 'Ducat India', period: 'May 2021 – Oct 2021',
+    desc: 'Hands-on experience with Python, Django, DRF, Angular, React, HTML, and CSS. Built REST APIs and optimized backend logic.',
     tags: ['Python', 'Django', 'DRF', 'REST APIs', 'HTML/CSS'],
   },
   {
-    role: 'UX-ProdX Intern', org: 'UX-ProdX', period: 'Jan 2022 – Mar 2022',
+    role: 'UX-ProdX Intern', org: 'UX-ProdX', period: 'Aug 2021 – Nov 2021',
     desc: 'Designed scalable, maintainable UI components from Figma designs. Enhanced UX across navigation, account, and registration pages.',
     tags: ['HTML', 'CSS', 'Bootstrap', 'Figma', 'UI Design'],
   },
@@ -44,12 +44,12 @@ export default function Education() {
               <div style={{ fontSize: 'clamp(13px,1.6vw,15px)', color: 'var(--accent)', fontWeight: 600, marginBottom: '6px' }}>
                 Maulana Mazharul Haque Arabic<br />and Persian University
               </div>
-              <div style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--text-muted)', marginBottom: '24px' }}>Patna, Bihar · Jun 2018 – Aug 2021</div>
+              <div style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--text-secondary)', marginBottom: '24px' }}>Patna, Bihar · Jun 2018 – Aug 2021</div>
 
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '10px' }}>
                 {[{ label: 'Duration', value: '3 Years' }, { label: 'Field', value: 'CS' }, { label: 'Status', value: 'Completed' }].map((item, i) => (
                   <div key={i} style={{ padding: '10px', background: 'var(--bg-3)', borderRadius: 'var(--radius)', border: '1px solid var(--border)', textAlign: 'center' }}>
-                    <div style={{ fontFamily: 'var(--font-mono)', fontSize: '9px', color: 'var(--text-muted)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '4px' }}>{item.label}</div>
+                    <div style={{ fontFamily: 'var(--font-mono)', fontSize: '9px', color: 'var(--text-secondary)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '4px' }}>{item.label}</div>
                     <div style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text-primary)' }}>{item.value}</div>
                   </div>
                 ))}
@@ -59,8 +59,8 @@ export default function Education() {
 
           {/* Internships */}
           <div className="reveal-right">
-            <div style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', color: 'var(--text-muted)', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '20px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <span style={{ width: '20px', height: '1px', background: 'var(--text-muted)', display: 'block' }} />
+            <div style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', color: 'var(--accent)', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '20px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <span style={{ width: '20px', height: '1px', background: 'var(--text-primary)', display: 'block' }} />
               Internships
             </div>
             {internships.map((intern, i) => (
@@ -73,13 +73,13 @@ export default function Education() {
                 onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.transform = 'translateX(0)' }}
               >
                 <div style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: '2px', background: 'var(--accent-2)', borderRadius: '0 2px 2px 0' }} />
-                <div style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', color: 'var(--accent-2)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '6px' }}>{intern.period}</div>
+                <div style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', color: 'rgb(251, 191, 36)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '6px' }}>{intern.period}</div>
                 <div style={{ fontSize: 'clamp(14px,1.6vw,16px)', fontWeight: 600, color: 'var(--text-primary)', marginBottom: '4px' }}>{intern.role}</div>
                 <div style={{ fontSize: '13px', color: 'var(--accent-2)', fontWeight: 500, marginBottom: '10px' }}>{intern.org}</div>
                 <p style={{ fontSize: 'clamp(12px,1.4vw,13px)', color: 'var(--text-secondary)', lineHeight: 1.7, marginBottom: '14px' }}>{intern.desc}</p>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
                   {intern.tags.map((tag, j) => (
-                    <span key={j} style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', color: 'var(--text-muted)', border: '1px solid var(--border)', padding: '3px 8px', borderRadius: '4px' }}>{tag}</span>
+                    <span key={j} style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', color: 'var(--text-secondary)', border: '1px solid var(--border)', padding: '3px 8px', borderRadius: '4px' }}>{tag}</span>
                   ))}
                 </div>
               </div>

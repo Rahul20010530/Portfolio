@@ -449,7 +449,7 @@ export default function Contact({ onResumeOpen }) {
             borderTop: '1px solid var(--border)',
             paddingTop: '28px',
             display: 'flex',
-            justifyContent: 'space-between',
+            justifyContent: 'center',
             alignItems: 'center',
             flexWrap: 'wrap',
             gap: '12px',
@@ -459,16 +459,12 @@ export default function Contact({ onResumeOpen }) {
           <div
             style={{
               fontFamily: 'var(--font-mono)',
-              fontSize:
-                'clamp(10px,1.2vw,12px)',
-              color: 'var(--text-muted)',
+              fontSize:'clamp(10px,1.2vw,12px)',
+              color: 'var(--text-secondary)',
             }}
           >
             © 2026{' '}
-            <span
-              style={{
-                color: 'var(--accent)',
-              }}
+            <span style={{color: 'var(--accent)',}}
             >
               Rahul Kumar
             </span>
@@ -478,7 +474,7 @@ export default function Contact({ onResumeOpen }) {
             style={{
               fontFamily: 'var(--font-mono)',
               fontSize: '11px',
-              color: 'var(--text-muted)',
+              color: 'var(--text-secondary)',
               display: 'flex',
               gap: '6px',
               alignItems: 'center',
