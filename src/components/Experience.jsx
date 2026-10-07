@@ -3,16 +3,34 @@ import TiltCard from './TiltCard'
 import useBreakpoint from '../utils/useBreakpoint'
 
 const experiences = [
+   {
+    role: 'Software Developer (AI & LLM Systems)',
+    company: 'Staqu Technologies',
+    client: 'Police Assistance Platform and I4C (Govt. of India)',
+    period: 'May 2026 – Aug 2026',
+    duration: '4 months',
+    type: 'Contractual',
+    highlights: [
+      'Developed and maintained a Django + Django REST Framework based Police Assistance Platform for CCTNS FIR document ingestion and processing',
+      'Built LLM-powered CrimeGPT features using RAG for natural-language querying of crime and FIR data',
+      'Developed NLP pipelines for extracting persons, locations, offences, and legal sections from unstructured FIR documents',
+      'Implemented semantic search and vector retrieval using Milvus and OpenSearch for FIR and criminal records',
+      'Worked on I4C-related features supporting cybercrime coordination and criminal-tracking use cases',
+      'Developed Suspect and Victim dashboards combining linked records, case history, and investigation analytics',
+    ],
+    tags: ['Python','Django','DRF','LLM','RAG','NLP','Milvus','OpenSearch',],
+    accent: 'var(--accent-2)',
+  },
   {
     role: 'Python Developer', company: 'Pioneer E Solutions',
-    client: 'Govt. of India (UPSC / NIC)', period: 'Nov 2024 – Present', duration: 'Current', type: 'Full-time',
+    client: 'Govt. of India (UPSC / NIC)', period: 'Nov 2024 – Present', duration: '1y 6 months', type: 'Full-time',
     highlights: ['Designed scalable backend APIs for India\'s UPSC portal using FastAPI + MongoDB', 'Optimized large-scale pipelines using Python multiprocessing & multithreading', 'Implemented Big Data report-generation workflows for operational analytics', 'Integrated AWS S3 for secure government-grade document upload & retrieval', 'Built high-performance MongoDB schemas, indexes & aggregation pipelines', 'Ensured strict IT compliance, security standards, and government data policies'],
     tags: ['FastAPI', 'MongoDB', 'AWS S3', 'Multiprocessing', 'JWT', 'NIC', 'Redis'],
     accent: 'var(--accent)',
   },
   {
     role: 'Backend Developer', company: 'Hostbooks Limited',
-    client: 'Internal Product', period: 'Jul 2022 – Oct 2024', duration: '2y 3m', type: 'Full-time',
+    client: 'Internal Product', period: 'Jan 2022 – Oct 2024', duration: '2y 10m', type: 'Full-time',
     highlights: ['Developed a custom data preparation & cleaning platform similar to Tableau Prep Builder', 'Built integration pipelines supporting MongoDB, MySQL, CSV, Excel, and JSON', 'Designed Data Warehouse modules handling large-scale dataset transformations', 'Built custom report generation engines based on dynamic user-defined parameters', 'Developed backend plugins for Shopify, Hotelogix, and Consolidation XML/XLSX', 'Implemented Canara Spring integration for real-time financial data processing'],
     tags: ['Django', 'DRF', 'MongoDB', 'MySQL', 'Shopify API', 'Data Warehouse', 'Python'],
     accent: 'var(--accent-2)',
@@ -46,7 +64,7 @@ export default function Experience() {
                     color: active === i ? 'var(--bg)' : e.accent,
                     background: active === i ? e.accent : 'transparent',
                     border: `1px solid ${e.accent}`,
-                    padding: '8px 16px', borderRadius: 'var(--radius)',
+                    padding: '8px 16px', borderRadius: 'var(--radius)',borderColor: e.accent, transition: 'all 0.2s',
                     letterSpacing: '0.08em', textTransform: 'uppercase', transition: 'all 0.2s',
                   }}>{e.company.split(' ').slice(0, 2).join(' ')}</button>
                 ))}
@@ -59,17 +77,18 @@ export default function Experience() {
                 style={{ padding: '20px', marginBottom: '12px', background: active === i ? 'var(--surface)' : 'transparent', border: `1px solid ${active === i ? e.accent : 'var(--border)'}`, borderRadius: 'var(--radius-lg)', transition: 'all 0.3s', position: 'relative', overflow: 'hidden' }}
                 className="hoverable"
               >
-                {active === i && <div style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: '3px', background: e.accent, boxShadow: `0 0 10px ${e.accent}` }} />}
+                {active === i && <div style={{ position: 'absolute', left: '-10px', top: 0, bottom: 0, width: '3px', background: e.accent, boxShadow: `0 0 10px ${e.accent}` }} />}
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '6px' }}>
                   <div>
-                    <div style={{ fontFamily: 'var(--font-mono)', fontSize: '9px', color: e.accent, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '4px' }}>{e.type}</div>
+                    <div style={{ fontFamily: 'var(--font-mono)', fontSize: '9px',letterSpacing: '0.1em',color: 'var(--text-accent)', textTransform: 'uppercase', marginBottom: '4px' }}>{e.type}</div>
                     <div style={{ fontSize: '14px', fontWeight: 600, color: active === i ? 'var(--text-primary)' : 'var(--text-secondary)', transition: 'color 0.2s' }}>{e.role}</div>
                   </div>
-                  <span style={{ fontFamily: 'var(--font-mono)', fontSize: '9px', color: 'var(--text-muted)', background: 'var(--surface-2)', padding: '3px 7px', borderRadius: '4px', whiteSpace: 'nowrap', marginLeft: '8px' }}>{e.duration}</span>
+                  <span style={{ fontFamily: 'var(--font-mono)', fontSize: '9px', color: 'var(--text-secondary)', background: 'var(--surface-2)', padding: '3px 7px', borderRadius: '4px', whiteSpace: 'nowrap', marginLeft: '8px' }}>{e.duration}</span>
                 </div>
                 <div style={{ fontWeight: 600, color: e.accent, fontSize: '13px', marginBottom: '3px' }}>{e.company}</div>
-                <div style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', color: 'var(--text-muted)', marginBottom: '8px' }}>{e.period}</div>
-                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '9px', color: 'var(--text-muted)', padding: '3px 8px', background: 'var(--accent-dim)', border: '1px solid var(--border)', borderRadius: '4px' }}>{e.client}</span>
+                <div style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', color: 'var(--text-accent)', marginBottom: '8px' }}>{e.period}</div>
+                {/* <span style={{ fontFamily: 'var(--font-mono)', fontSize: '9px', color: 'var(--text-muted)', padding: '3px 8px', background: 'var(--accent-dim)', border: '1px solid var(--border)',n, borderRadius: '4px' }}>{e.client}</span> */}
+                <span style={{fontFamily: 'var(--font-mono)',fontSize: '9px',color: 'var(--primary)',padding: '3px 8px',background: 'var(--accent-dim)',border: '1px solid var(--border)',borderRadius: '4px'}}>{e.client}</span>
               </TiltCard>
             ))}
           </div>
@@ -83,11 +102,11 @@ export default function Experience() {
                   <div style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: exp.accent, letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '8px' }}>{exp.period}</div>
                   <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px,4vw,42px)', color: 'var(--text-primary)', letterSpacing: '0.03em', lineHeight: 1.05, marginBottom: '6px' }}>{exp.role}</h3>
                   <div style={{ fontSize: 'clamp(15px,2vw,18px)', fontWeight: 600, color: exp.accent, marginBottom: '4px' }}>{exp.company}</div>
-                  <div style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', color: 'var(--text-muted)' }}>Client: {exp.client}</div>
+                  <div style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', color: 'var(--text-secondary)' }}>Client: {exp.client}</div>
                 </div>
                 <div style={{ width: '32px', height: '2px', background: exp.accent, marginBottom: '24px', boxShadow: `0 0 8px ${exp.accent}` }} />
                 <div style={{ marginBottom: '28px' }}>
-                  <div style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', color: 'var(--text-muted)', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '14px' }}>Key Contributions</div>
+                  <div style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', color: 'var(--text-secondary)', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '14px' }}>Key Contributions</div>
                   {exp.highlights.map((h, i) => (
                     <div key={i} style={{ display: 'flex', gap: '12px', marginBottom: '12px', alignItems: 'flex-start' }}>
                       <span style={{ marginTop: '7px', width: '5px', height: '5px', borderRadius: '50%', background: exp.accent, flexShrink: 0, boxShadow: `0 0 6px ${exp.accent}` }} />
@@ -107,6 +126,7 @@ export default function Experience() {
             </div>
           </div>
         </div>
+
       </div>
     </section>
   )

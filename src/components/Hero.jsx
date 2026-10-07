@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef } from 'react'
 import MagneticButton from './MagneticButton'
 
-const roles = ['Backend Developer','Python Developer','FastAPI Architect', 'Microservices Architect',  'GenAI Developer', 'System Designer']
+const roles = ['Backend Developer','Python Developer',
+  'FastAPI Architect', 'Microservices Architect',  'GenAI Developer', 'System Designer']
 
 export default function Hero({ onResumeOpen }) {
   const [roleIdx, setRoleIdx] = useState(0)
@@ -55,7 +56,7 @@ export default function Hero({ onResumeOpen }) {
 
   // Count up
   useEffect(() => {
-    const targets = [4, 2, 10, 2], suffixes = ['+', '', '+', '']
+    const targets = [10, 3, 10, 2], suffixes = ['+', '', '+', '']
     statsRef.current.forEach((el, i) => {
       if (!el) return
       let t0 = null
@@ -135,11 +136,15 @@ export default function Hero({ onResumeOpen }) {
               marginTop: '20px', fontSize: 'clamp(14px,1.6vw,16px)', color: 'var(--text-secondary)', maxWidth: '520px', lineHeight: 1.8,
               animation: 'fadeInUp 0.8s ease forwards', opacity: 0, animationDelay: '0.55s',
             }}>
-              4 years crafting scalable backend systems at government scale. Specializing in{' '}
+              5 years crafting scalable backend systems at government scale. Specializing in{' '}
               <span style={{ color: 'var(--text-primary)', fontWeight: 600 }}>FastAPI</span>,{' '}
               <span style={{ color: 'var(--text-primary)', fontWeight: 600 }}>Django</span>,{' '}
-              <span style={{ color: 'var(--text-primary)', fontWeight: 600 }}>MongoDB</span> &{' '}
-              <span style={{ color: 'var(--accent)', fontWeight: 600 }}>LangChain AI</span>.
+              <span style={{ color: 'var(--text-primary)', fontWeight: 600 }}>DRF</span>,{' '}
+              <span style={{ color: 'var(--text-primary)', fontWeight: 600 }}>Flask</span>,{' '}
+              <span style={{ color: 'var(--text-primary)', fontWeight: 600 }}>Angular</span>,{' '}
+              <span style={{ color: 'var(--text-primary)', fontWeight: 600 }}>MongoDB</span>, {' '}
+              <span style={{ color: 'var(--accent)', fontWeight: 600 }}>LangChain &</span> {' '}
+              <span style={{ color: 'var(--accent)', fontWeight: 600 }}>LangGraph</span>.
             </p>
 
             {/* CTAs */}
@@ -191,14 +196,14 @@ export default function Hero({ onResumeOpen }) {
                   {[
                     { p: '$ ', cmd: 'whoami' }, { out: 'rahul_kumar', c: 'var(--text-primary)' },
                     { p: '$ ', cmd: 'cat stack.json' },
-                    { key: '"backend"', val: '["FastAPI","Django","DRF"]', vc: '#fbbf24' },
+                    { key: '"backend"', val: '["FastAPI","Django","DRF","Flask"]', vc: '#fbbf24' },
                     { key: '"database"', val: '["MongoDB","MySQL","Redis"]', vc: '#34d399' },
                     { key: '"cloud"', val: '["AWS S3","EC2","Route53"]', vc: 'var(--accent-2)' },
                     { key: '"ai"', val: '["LangChain","OpenAI","RAG"]', vc: '#a78bfa' },
-                    { key: '"compliance"', val: '"Govt. Grade / NIC"', vc: 'var(--accent)' },
+                    { key: '"compliance"', val: '"Govt. Grade / NIC / UP Police & I4C"', vc: 'var(--accent)' },
                     { p: '$ ', cmd: 'status' }, { out: '✓ Available for opportunities', c: '#28c840' },
                   ].map((l, i) => (
-                    <div key={i} style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
+                    <div key={i} style={{ display: 'flex', gap: '3px', flexWrap: 'wrap' }}>
                       {l.p && <><span style={{ color: 'var(--accent)' }}>{l.p}</span><span style={{ color: 'var(--text-primary)' }}>{l.cmd}</span></>}
                       {l.out && <span style={{ color: l.c }}>{l.out}</span>}
                       {l.key && (<><span style={{ color: 'var(--text-muted)', marginLeft: '10px' }} /><span style={{ color: 'var(--accent-2)' }}>{l.key}</span><span style={{ color: 'var(--text-muted)' }}>:</span><span style={{ color: l.vc }}>{l.val}</span></>)}
@@ -213,10 +218,10 @@ export default function Hero({ onResumeOpen }) {
             </div>
             {/* Floating badges */}
             <div style={{ position: 'absolute', right: '-16px', top: '70px', background: 'var(--surface)', border: '1px solid rgba(0,229,255,0.3)', borderRadius: '10px', padding: '12px 16px', boxShadow: '0 8px 32px rgba(0,0,0,0.5)', animation: 'float 4s ease-in-out infinite' }}>
-              <div style={{ fontFamily: 'var(--font-display)', fontSize: '26px', color: 'var(--accent-2)', lineHeight: 1 }}>4+</div>
-              <div style={{ fontFamily: 'var(--font-mono)', fontSize: '9px', color: 'var(--text-muted)', marginTop: '2px' }}>YEARS</div>
+              <div style={{ fontFamily: 'var(--font-display)', fontSize: '26px', color: 'var(--accent-2)', lineHeight: 1 }}>5 +</div>
+              <div style={{ fontFamily: 'var(--font-mono)', fontSize: '9px', color: 'var(--accent)', marginTop: '2px' }}>YEARS</div>
             </div>
-            <div style={{ position: 'absolute', left: '-20px', bottom: '70px', background: 'var(--surface)', border: '1px solid rgba(124,58,237,0.3)', borderRadius: '10px', padding: '12px 16px', boxShadow: '0 8px 32px rgba(0,0,0,0.5)', animation: 'float 5s ease-in-out infinite', animationDelay: '1s' }}>
+            <div style={{ position: 'absolute', left: '-43px', bottom: '143px', background: 'var(--surface)', border: '1px solid rgba(124,58,237,0.3)', borderRadius: '10px', padding: '12px 16px', boxShadow: '0 8px 32px rgba(0,0,0,0.5)', animation: 'float 5s ease-in-out infinite', animationDelay: '1s' }}>
               <div style={{ fontFamily: 'var(--font-display)', fontSize: '22px', color: 'var(--accent-3)', lineHeight: 1 }}>NIC</div>
               <div style={{ fontFamily: 'var(--font-mono)', fontSize: '9px', color: 'var(--text-muted)', marginTop: '2px' }}>GOV SCALE</div>
             </div>
